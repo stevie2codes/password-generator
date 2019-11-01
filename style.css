@@ -1,0 +1,22 @@
+body{
+    background-color: dimgray;
+}
+
+.main-cont{
+    margin: 0 auto;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.output-box{
+    display:flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 50%;
+    height: 150px;
+    border: 3px groove gray;
+   
+    margin: 2rem auto;
+}
