@@ -15,31 +15,48 @@
 The application should validate user input and ensure that at least one character type is selected.*/
 
 
-const specialSet = ("!#$%&'()*+,-./:;<=>?@[]^_`{|}~");
+const specialSet = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~" ;
 const numericSet = "0123456789";
 const lowerSet = "abcdefghijklmnopqrstuvwxyz";
 const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let allSets = specialSet + numericSet + lowerSet + upperSet;
 
 
 
 
+function generate() {
+  let userInput = prompt("Enter a number between 8 - 128 for length of password");
+  let userSize = parseInt(userInput);
+  
 
-function generate(){
-    let userInput = prompt("Enter a number between 8 - 128 for length of password");
-    let allSets = specialSet + numericSet + lowerSet + upperSet;
-    let passwordResult = "";
-
-  if(userInput < 8 || userInput > 128 || userInput === NaN){
-      return alert("You must enter a valid number");
-  };
+  if (userSize < 8 || userSize > 128 || isNaN(userSize)) {
+    alert("You must enter a valid number");
+  }
+  else {
   let specialOption = confirm("Would you like your password to contain special characters?");
   let numericOption = confirm("Would you like your password to contain numbers?");
   let lowerOption = confirm("would you like your password to contain lower case letters?");
   let upperOption = confirm("would you like your password to contain Upper case letters?");
-   
-  if(specialOption === true && numericOption === true && lowerOption === true && upperOption === true ){
-      return document.getElementById("display").innerHTML = allSets;
 
+  if(specialOption) {
+    return document.getElementById("display").innerHTML ="hello";
   }
-    
+  if(numericOption) {
+    return document.getElementById("display").innerHTML ="hello";
+  }
+  if(lowerOption) {
+    return document.getElementById("display").innerHTML ="hello";
+  }
+
+  if(upperOption) {
+    return document.getElementById("display").innerHTML ="hello";
+  }
+
+  
+  }
+
+
+
+
+
 }
