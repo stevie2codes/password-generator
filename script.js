@@ -19,10 +19,9 @@ const specialSet = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~" ;
 const numericSet = "0123456789";
 const lowerSet = "abcdefghijklmnopqrstuvwxyz";
 const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let allSets = specialSet + numericSet + lowerSet + upperSet;
 
-
-
+let charsConfirmed = '';
+let passwordResult = '';
 
 function generate() {
   let userInput = prompt("Enter a number between 8 - 128 for length of password");
@@ -39,24 +38,27 @@ function generate() {
   let upperOption = confirm("would you like your password to contain Upper case letters?");
 
   if(specialOption) {
-    return document.getElementById("display").innerHTML ="hello";
+   charsConfirmed += specialSet;
   }
   if(numericOption) {
-    return document.getElementById("display").innerHTML ="hello";
+   charsConfirmed += numericSet ;
   }
   if(lowerOption) {
-    return document.getElementById("display").innerHTML ="hello";
+   charsConfirmed += lowerSet;
   }
-
   if(upperOption) {
-    return document.getElementById("display").innerHTML ="hello";
+   charsConfirmed += upperSet;
   }
-
+  }
+  passwordResult = charsConfirmed.length;
+  console.log(passwordResult);
   
   }
 
+  
+  
 
 
 
 
-}
+
