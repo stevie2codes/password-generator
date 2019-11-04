@@ -39,6 +39,10 @@ h2 {
 .output-text {
   margin-top: 10%;
   font-family: "Prosto One", cursive;
+  font-size: 12px;
+  justify-content: center;
+  display: flex;
+  align-content: center;
 }
 
 .output-box {

@@ -50,9 +50,20 @@ function generate() {
    charsConfirmed += upperSet;
   }
   }
-  passwordResult = charsConfirmed.length;
-  console.log(passwordResult);
   
+  passLength = charsConfirmed.length;
+  
+  function randomize(length){
+     for(let i = 0; i <= length; i++) {
+    passwordResult += charsConfirmed.charAt(Math.floor(Math.random() * passLength));
+    }
+    return passwordResult;
+  }
+
+  
+  document.getElementById("display").innerHTML = randomize(userInput);
+  
+
   }
 
   
