@@ -34,6 +34,7 @@ h2 {
   justify-content: center;
   text-align: center;
   box-shadow: #548fcc 0px 0px 6px;
+  
 }
 
 .output-text {
@@ -53,6 +54,7 @@ h2 {
   height: 150px;
   border: 2px dashed #315b8a;
   margin: 4rem auto;
+  overflow: scroll;
 }
 
 .btn-left,
