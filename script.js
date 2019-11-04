@@ -34,19 +34,21 @@ function generate() {
   if (userSize < 8 || userSize > 128 || isNaN(userSize)) {
     alert("You must enter a valid number");
   }
-  else if (specialOption) {
+  else if (specialOption){ 
     charsConfirmed += specialSet;
   }
-  else if (numericOption) {
+  
+   if(numericOption) {
     charsConfirmed += numericSet;
-  }
-  else if (lowerOption) {
+}
+  if (lowerOption) {
     charsConfirmed += lowerSet;
   }
-
-  else if (upperOption) {
+  
+   if(upperOption){ 
     charsConfirmed += upperSet;
-  } else {
+ }
+  else{ (charsConfirmed = null)
     alert("You must choose at least one option of character");
   }
   passLength = charsConfirmed.length;
