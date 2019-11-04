@@ -47,6 +47,7 @@ function generate() {
   if(upperOption) {
    charsConfirmed += upperSet;
   }
+  else alert('You must choose at least one option of character');
 } 
   passLength = charsConfirmed.length;
   
