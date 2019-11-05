@@ -56,12 +56,12 @@ function generate() {
   function randomize(length) {
     for (let i = 0; i <= length; i++) {
       passwordResult += charsConfirmed.charAt(
-        Math.floor(Math.random() * passLength - 1)
+        Math.floor(Math.random() * passLength)
       );
     }
     return passwordResult;
   }
-  document.getElementById("password").innerHTML = randomize(userSize);
+  document.getElementById("password").innerHTML = randomize(userSize -1) ;
 }
 
 /*Copy password function */

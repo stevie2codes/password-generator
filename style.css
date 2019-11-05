@@ -53,7 +53,8 @@ h2 {
 
 .btn-left,
 .btn-right {
-  margin-bottom: 15%;
+  margin: 15px 15px 40px 15px;
+
   padding: 10px;
   border-radius: 100px;
   border: none;
@@ -61,12 +62,10 @@ h2 {
 }
 
 .btn-left {
-  margin-right: 10px;
   background-color: #fcca6c;
 }
 
 .btn-right {
-  margin-left: 10px;
   background-color: #548fcc;
 }
 
