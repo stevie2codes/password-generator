@@ -24,16 +24,20 @@ h2 {
   margin: 0 auto;
 }
 
+#password{
+  text-align: center;
+}
+
 .main-cont {
   background-color: rgba(254, 117, 104, 1);
-  border: 2px double #315b8a;
+  border: 3px solid #315b8a;
   border-radius: 4px;
   margin: 4em auto;
   width: 80%;
   align-content: center;
   justify-content: center;
   text-align: center;
-  box-shadow: #548fcc 0px 0px 6px;
+  box-shadow: #548fcc  0px 0px 40px;
   
 }
 
