@@ -53,8 +53,20 @@ h2 {
   align-content: center;
   justify-content: center;
   text-align: center;
-  box-shadow: #548fcc  0px 0px 40px;
-  
+  /* box-shadow: #548fcc  0px 0px 40px; */
+  animation-name: shadow;
+  animation-duration: 5s;
+  transition: all 1s ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shadow {
+  0%{
+    box-shadow: #548fcc 0px 0px 0px;
+  }
+  100%{
+    box-shadow: #548fcc 0px 0px 60px;
+  }
 }
 
 #password {
