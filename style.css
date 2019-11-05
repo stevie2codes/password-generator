@@ -104,12 +104,12 @@ h2 {
 
 .btn-left {
   background-color: rgba(254, 117, 104, 1);
-  border:3px solid black;
+  border:1.5px solid #315b8a;
 }
 
 .btn-right {
   background-color: rgba(254, 117, 104, 1);
-  border:3px solid black;
+  border:1.5px solid #315b8a;
 }
 
 .btn-left:hover{
