@@ -37,16 +37,7 @@ h2 {
   
 }
 
-.output-text {
-  margin-top: 10%;
-  font-family: "Prosto One", cursive;
-  font-size: 12px;
-  justify-content: center;
-  display: flex;
-  align-content: center;
-}
-
-.output-box {
+#password {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -54,7 +45,6 @@ h2 {
   height: 150px;
   border: 2px dashed #315b8a;
   margin: 4rem auto;
-  overflow: scroll;
 }
 
 .btn-left,

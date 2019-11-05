@@ -61,5 +61,15 @@ function generate() {
     }
     return passwordResult;
   }
-  document.getElementById("display").innerHTML = randomize(userSize);
+  document.getElementById("password").innerHTML = randomize(userSize);
+}
+
+/*Copy password function */
+
+function myFunction() {
+  var copyText = document.getElementById("password");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
 }

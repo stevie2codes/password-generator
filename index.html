@@ -24,14 +24,14 @@
                 <div class="main-text">
                     <h2>Generate a Password</h2>
                 </div>
-                <div class="col-8 output-box">
-                    <div class="output-text">
-                        <p id="display">**Your Secure Password**</p>
-                    </div>
-                </div>
+                <textarea readonly id="password" 
+                placeholder="Your Secure Password"
+                aria-label="Generated Password">
+                   
+                </textarea>
 
                 <button onclick="generate()" class="btn-left">Generate Password</button>
-                <button class="btn-right">Copy to clipboard</button>
+                <button id="copy" onclick="myFunction()" class="btn-right">Copy to clipboard</button>
             </div>
 
         </div>
