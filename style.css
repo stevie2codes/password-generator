@@ -40,68 +40,92 @@ h2 {
 }
 
 
-#password{
-  text-align: center;
-}
-
 .main-cont {
   background-color: rgba(254, 117, 104, 1);
-  border: 4px solid #315b8a;
-  border-radius: 5px;
+  border: 5px solid rgba(254, 117, 104, .5);
+  border-radius: 3px;
   margin: 4em auto;
   width: 80%;
   align-content: center;
   justify-content: center;
   text-align: center;
-  /* box-shadow: #548fcc  0px 0px 40px; */
-  animation-name: shadow;
-  animation-duration: 5s;
-  transition: all 1s ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes shadow {
-  0%{
-    box-shadow: #548fcc 0px 0px 0px;
-  }
-  100%{
-    box-shadow: #548fcc 0px 0px 60px;
-  }
+  box-shadow: 0px 18px 25px -5px rgba(0, 0, 0,.4);
 }
 
 #password {
   display: flex;
+  text-align: center;
   flex-direction: column;
   background-color: #fff;
   width: 60%;
   height: 150px;
-  border: 2px dashed #315b8a;
+   border: 2px solid #315b8a; 
   margin: 4rem auto;
 }
 
+.box {
+  position: relative;
+  
+}
+
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  top: 90%;
+  bottom:20px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.box::before{
+  background:lightslategrey;
+  left: 5px;
+  right: 45px;
+  transform: rotate(-3deg);
+}
+
+.box::after{
+  background:blue;
+  left: 45px;
+  right: 5px;
+  transform: rotate(3deg);
+}
 
 .btn-left,
 .btn-right {
   margin: 15px 15px 40px 15px;
-
   padding: 10px;
   border-radius: 100px;
   border: none;
   font-family: Arial, Helvetica, sans-serif;
+  box-shadow: rgba(87, 100, 116,.5) 0px 0px 10px;
 }
 
 .btn-left {
-  background-color: #fcca6c;
+  background-color: rgba(254, 117, 104, 1);
+  border:3px solid black;
 }
 
 .btn-right {
-  background-color: #548fcc;
+  background-color: rgba(254, 117, 104, 1);
+  border:3px solid black;
+}
+
+.btn-left:hover{
+  background-color: #fcca6c;
+  transition: all ease-in-out 200ms;
+}
+.btn-right:hover{
+  background-color: #4585cf;
+  transition: all ease-in-out 200ms;
 }
 
 .btn-left:hover,
 .btn-right:hover {
-  box-shadow: rgb(87, 100, 116) 3px 3px 5px;
+  box-shadow: rgb(87, 100, 116) 3px 3px 10px;
   transform: scale(1.05);
-  transition: all ease-in-out 250ms;
+  transition: all ease-in-out 200ms;
   cursor:pointer;
+  opacity: 0.9;
 }
