@@ -12,22 +12,13 @@ const lowerSet = "abcdefghijklmnopqrstuvwxyz";
 const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function generate() {
-  let userInput = prompt(
-    "Enter a number between 8 - 128 for length of password"
-  );
+  let userInput = prompt("Enter a number between 8 - 128 for length of password");
   let userSize = parseInt(userInput);
-  let specialOption = confirm(
-    "Would you like your password to contain special characters?"
-  );
-  let numericOption = confirm(
-    "Would you like your password to contain numbers?"
-  );
-  let lowerOption = confirm(
-    "would you like your password to contain lower case letters?"
-  );
-  let upperOption = confirm(
-    "would you like your password to contain Upper case letters?"
-  );
+  let specialOption = confirm( "Would you like your password to contain special characters?");
+  let numericOption = confirm("Would you like your password to contain numbers?");
+  let lowerOption = confirm("would you like your password to contain lower case letters?");
+  let upperOption = confirm("would you like your password to contain Upper case letters?");
+
   let passwordResult = "";
   let charsConfirmed = "";
 
@@ -38,14 +29,14 @@ function generate() {
     charsConfirmed += specialSet;
   }
   
-   if(numericOption) {
+  else if(numericOption) {
     charsConfirmed += numericSet;
 }
-  if (lowerOption) {
+  else if (lowerOption) {
     charsConfirmed += lowerSet;
   }
   
-   if(upperOption){ 
+   else if(upperOption){ 
     charsConfirmed += upperSet;
  }
   else{ (charsConfirmed = null)
