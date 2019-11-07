@@ -27,7 +27,7 @@ function generate() {
     return;
 
   }
-  else if (specialOption) {
+   if (specialOption) {
     charsConfirmed += specialSet;
   }
 
@@ -42,9 +42,9 @@ function generate() {
     charsConfirmed += upperSet;
   }
   else {
-    (charsConfirmed === 0);
-    charsConfirmed = 0;
-    alert("You must choose at least one option of character");
+    if(charsConfirmed < 1){
+     alert("You must choose at least one option of character");
+    }
   }
   passLength = charsConfirmed.length;
 
