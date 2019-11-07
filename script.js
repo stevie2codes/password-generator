@@ -14,7 +14,7 @@ const upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 function generate() {
   let userInput = prompt("Enter a number between 8 - 128 for length of password");
   let userSize = parseInt(userInput);
-  let specialOption = confirm( "Would you like your password to contain special characters?");
+  let specialOption = confirm("Would you like your password to contain special characters?");
   let numericOption = confirm("Would you like your password to contain numbers?");
   let lowerOption = confirm("would you like your password to contain lower case letters?");
   let upperOption = confirm("would you like your password to contain Upper case letters?");
@@ -24,22 +24,26 @@ function generate() {
 
   if (userSize < 8 || userSize > 128 || isNaN(userSize)) {
     alert("You must enter a valid number");
+    return;
+
   }
-  else if (specialOption){ 
+  else if (specialOption) {
     charsConfirmed += specialSet;
   }
-  
-  else if(numericOption) {
+
+  if (numericOption) {
     charsConfirmed += numericSet;
-}
-  else if (lowerOption) {
+  }
+  if (lowerOption) {
     charsConfirmed += lowerSet;
   }
-  
-   else if(upperOption){ 
+
+  if (upperOption) {
     charsConfirmed += upperSet;
- }
-  else{ (charsConfirmed = null)
+  }
+  else {
+    (charsConfirmed === 0);
+    charsConfirmed = 0;
     alert("You must choose at least one option of character");
   }
   passLength = charsConfirmed.length;
@@ -52,7 +56,7 @@ function generate() {
     }
     return passwordResult;
   }
-  document.getElementById("password").innerHTML = randomize(userSize -1) ;
+  document.getElementById("password").innerHTML = randomize(userSize - 1);
 }
 
 /*Copy password function */
